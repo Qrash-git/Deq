@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
         });
         req.on('end', () => {
             const parsedBody = querystring.parse(body);
-            data.push({ name: parsedBody.name, age: parsedBody.age});
+            data.push({ guest_name: parsedBody.guest_name, message: parsedBody.message });
             res.writeHead(302, { 'Location': '/'});
             res.end();
         });
@@ -44,4 +44,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, hostname, () => {
     console.log('Server running at http://127.0.0.1:7000/');
-})
+});

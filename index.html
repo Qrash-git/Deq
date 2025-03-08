@@ -9,8 +9,8 @@
 
     <form action="/submit" method="post">
 
-        <input type="text" name="name" placeholder="Name"> Name:
-        <input type="text" name="age" placeholder="Age"> Age:
+        <input type="text" name="guest_name" placeholder="Guest Name"> Guest Name:
+        <input type="text" name="message" placeholder="Message"> Message:
         <button type="submit">Submit</button>
 
     </form>
@@ -24,7 +24,7 @@
                 const dataList = document.getElementById('data-list');
                 data.forEach(item => {
                     const li = document.createElement('li');
-                    li.textContent = `${item.name} - ${item.age}`;
+                    li.textContent = `${item.guest_name} - ${item.message}`;
                     dataList.appendChild(li);
                 });
             });
